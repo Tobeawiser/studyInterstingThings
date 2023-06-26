@@ -1,2 +1,2 @@
 # studyInterstingThings
-study and writing intersting thisng
+study and writing funny things 

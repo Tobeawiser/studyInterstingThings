@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.lovestory.dao.UserDao">
+
+    <insert id="insertValues" parameterType="java.util.List">
+        insert into
+        user(id,name,age,relation)
+        values
+        <foreach item="item" collection="list" separator=",">
+            ( #{item.id},
+            #{item.name},
+            #{item.age},
+            #{item.relation} )
+        </foreach>
+
+    </insert>
+    <insert id="insertMultiSql" parameterType="java.util.List">
+        START TRANSACTION;
+        <foreach item="item" collection="list" separator=";">
+            insert into
+            user(id,name,age,relation)
+            values
+            ( #{item.id},
+            #{item.name},
+            #{item.age},
+            #{item.relation} )
+        </foreach>
+        ; COMMIT;
+    </insert>
+    <insert id="insertException" parameterType="java.util.List">
+        insert into user(id, name, age, relation)
+        values (#{item.id},
+                #{item.name},
+                #{item.age},
+                #{item.relation})
+    </insert>
+</mapper>
