@@ -101,3 +101,9 @@ mvn clean install -DskipTests 跳过测试
 vmvare虚机重启后会重新开启一个虚拟ip地址
 
 构造一个调用api的程序和实际场景的应用的程序是不一样的，实际应用会考虑更多安全，性能，可扩展，关联关系，复用 设计方面因素
+
+
+# util.md 内容
+链接: https://pan.baidu.com/s/1J34PLr0i2F7Nt3_aScdlrA  提取码: kydn Linux内核及各发行版镜像：
+
+链接：https://pan.baidu.com/s/1kyD2dcMOdDAYf5tmBEtn9w 提取码：2h9v
